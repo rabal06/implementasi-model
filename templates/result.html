@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 offset-2">
+            <br>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Continent</th>
+                    </tr>
+                    </thead>
+                    {% for r in results %}
+                    <tbody>
+                    <tr>
+                        <td>{{ r.title }}</td>
+                        <td>{{ r.location }}</td>
+                        <td>{{ r.continent }}</td>
+                    </tr>
+                    </tbody>
+                    {% endfor %}
+                </table>
+                <br>
+                <hr>
+{% endblock %}
